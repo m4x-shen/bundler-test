@@ -6,7 +6,7 @@ The problem occurs when some components in the `aiqua-design-system` use `Pick` 
 
 ## Project Structure
 
-The same code in [`src/index.tsx`](/src/index.tsx) is bundled with both `tsdx` and `tsup`. The outputs are located in [`tsdx-dist/`](/tsdx-dist/) and [`tsup-dist/`](/tsup-dist/) respectively.
+The same code in [`src/index.tsx`](/src/index.tsx) is bundled with both `tsdx` and `tsup`. The output type declaration files are located in [`tsdx-dist/index.d.ts`](/tsdx-dist/index.d.ts) and [`tsup-dist/index.d.ts`](/tsup-dist/index.d.ts) respectively.
 
 ## Components and Testing
 
