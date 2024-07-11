@@ -1,0 +1,4 @@
+import react_default from 'react';
+react_default.createElement('div', {
+  className: "appier-ds " + 'test'
+}, null);

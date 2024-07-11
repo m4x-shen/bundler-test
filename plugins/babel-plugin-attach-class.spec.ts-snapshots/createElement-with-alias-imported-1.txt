@@ -1,0 +1,9 @@
+import { createElement as ce } from 'react';
+ce('div', {
+  className: "appier-ds " + 'test'
+}, [ce('h1', {
+  className: "appier-ds"
+}, 'foo'), ce('h2', {
+  key: '',
+  className: "appier-ds"
+}, 'bar')]);

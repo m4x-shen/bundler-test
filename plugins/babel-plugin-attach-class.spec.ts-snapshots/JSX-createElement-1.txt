@@ -1,0 +1,19 @@
+import React, { createElement } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+function App({
+  children
+}) {
+  return <div className="appier-ds">
+      {children}
+
+      <main className="appier-ds">
+        {createElement('h1', {
+        className: "appier-ds " + twMerge('test', ['a', 'b', 'c', `
+        foo
+        bar
+        `], 'd')
+      })}
+      </main>
+    </div>;
+}

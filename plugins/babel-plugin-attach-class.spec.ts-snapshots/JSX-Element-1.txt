@@ -1,0 +1,12 @@
+<div className="appier-ds test">
+  <h1 className="appier-ds" />
+  <h2 className={"appier-ds " + `flex`} />
+  <h3 className={"appier-ds " + cx('flex', true && 'text-red-40')} />
+  <h3 className={"appier-ds " + twMerge(['flex', false && ['text-red-40']])} />
+  <h4 className={"appier-ds " + `
+  a b c
+  d e f
+  `} />
+  <styled.div className="appier-ds a" />
+  <StyledDiv className="appier-ds a" />
+</div>;

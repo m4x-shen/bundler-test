@@ -11,7 +11,7 @@ interface MyComponentProps extends React.ComponentPropsWithRef<'div'> {
 export const MyComponent = React.forwardRef<HTMLDivElement, MyComponentProps>(
   ({ someProp, ...props }, ref) => {
     return (
-      <div {...props} ref={ref}>
+      <div {...props} ref={ref} className="test">
         {someProp}
       </div>
     );

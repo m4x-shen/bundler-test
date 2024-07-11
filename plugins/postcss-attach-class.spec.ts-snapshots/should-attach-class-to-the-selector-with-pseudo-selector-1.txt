@@ -1,0 +1,2 @@
+:where(.appier-ds).a:hover { display: flex; }
+:where(.appier-ds).hover\:flex { display: flex; }

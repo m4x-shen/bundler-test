@@ -1,0 +1,4 @@
+import { createElement } from 'react';
+createElement('div', {
+  className: "appier-ds " + 'test'
+}, null);

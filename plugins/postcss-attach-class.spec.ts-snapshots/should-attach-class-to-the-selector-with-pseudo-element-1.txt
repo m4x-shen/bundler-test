@@ -1,0 +1,2 @@
+:where(.appier-ds).a::before { display: flex; }
+:where(.appier-ds).before\:flex { display: flex; }

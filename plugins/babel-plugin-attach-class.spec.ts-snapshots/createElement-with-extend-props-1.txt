@@ -1,0 +1,6 @@
+import React from 'react';
+React.createElement('div', {
+  foo: 'bar',
+  ...props,
+  className: "appier-ds " + (props?.className ?? "")
+}, null);

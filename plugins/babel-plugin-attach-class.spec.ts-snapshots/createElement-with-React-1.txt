@@ -1,0 +1,15 @@
+import React from 'react';
+React.createElement('div', {
+  className: "appier-ds " + 'test'
+}, null);
+React.createElement("div", Object.assign({}, getFloatingProps({
+  ref: mergedPopoverRef,
+  style: {
+    position: strategy,
+    top: y != null ? y : '',
+    left: x != null ? x : '',
+    zIndex: 1000
+  }
+}), {
+  className: "appier-ds " + cx('text-content-high', className)
+}, props), children);

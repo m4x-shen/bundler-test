@@ -2,6 +2,7 @@ import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import dts from 'rollup-plugin-dts';
+import babel from '@rollup/plugin-babel';
 
 export default [
   {
@@ -18,7 +19,12 @@ export default [
         sourcemap: true
       }
     ],
-    plugins: [resolve(), commonjs(), typescript()]
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript(),
+      babel({ babelHelpers: 'bundled', configFile: './babel.config.js' })
+    ]
   },
   {
     input: 'src/index.tsx',
