@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.tsx",
   "scripts": {
-    "build:tsup": "tsup src/index.tsx --format cjs,esm --dts --sourcemap --out-dir tsup-dist",
+    "build:tsup": "tsup",
     "build:tsdx": "tsdx build && mv dist tsdx-dist"
   },
   "devDependencies": {
