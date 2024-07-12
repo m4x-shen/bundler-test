@@ -15,7 +15,6 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 /* global Reflect, Promise */
-
 function __rest(s, e) {
   var t = {};
   for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
@@ -24,9 +23,9 @@ function __rest(s, e) {
   }
   return t;
 }
-
-var react = {exports: {}};
-
+var react = {
+  exports: {}
+};
 var react_production_min = {};
 
 /*
@@ -34,6 +33,7 @@ object-assign
 (c) Sindre Sorhus
 @license MIT
 */
+
 var objectAssign;
 var hasRequiredObjectAssign;
 function requireObjectAssign() {
@@ -123,6 +123,7 @@ function requireObjectAssign() {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
 var hasRequiredReact_production_min;
 function requireReact_production_min() {
   if (hasRequiredReact_production_min) return react_production_min;
@@ -475,7 +476,6 @@ function requireReact_production_min() {
   react_production_min.version = "16.14.0";
   return react_production_min;
 }
-
 var react_development = {};
 
 /**
@@ -484,6 +484,7 @@ var react_development = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
 var ReactPropTypesSecret_1;
 var hasRequiredReactPropTypesSecret;
 function requireReactPropTypesSecret() {
@@ -493,7 +494,6 @@ function requireReactPropTypesSecret() {
   ReactPropTypesSecret_1 = ReactPropTypesSecret;
   return ReactPropTypesSecret_1;
 }
-
 var has;
 var hasRequiredHas;
 function requireHas() {
@@ -509,6 +509,7 @@ function requireHas() {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
 var checkPropTypes_1;
 var hasRequiredCheckPropTypes;
 function requireCheckPropTypes() {
@@ -601,13 +602,13 @@ function requireCheckPropTypes() {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
 var hasRequiredReact_development;
 function requireReact_development() {
   if (hasRequiredReact_development) return react_development;
   hasRequiredReact_development = 1;
   if (process.env.NODE_ENV !== "production") {
     (function () {
-
       var _assign = requireObjectAssign();
       var checkPropTypes = requireCheckPropTypes();
       var ReactVersion = '16.14.0';
@@ -2256,7 +2257,6 @@ function requireReact_development() {
   }
   return react_development;
 }
-
 if (process.env.NODE_ENV === 'production') {
   react.exports = requireReact_production_min();
 } else {
@@ -2268,23 +2268,47 @@ var reactExports = react.exports;
 // when Props is extended from React.ComponentPropsWithRef
 // the bundled type will be Pick<Props, ...>
 const MyComponent = reactExports.forwardRef((_a, ref) => {
-    var { someProp } = _a, props = __rest(_a, ["someProp"]);
-    return (reactExports.createElement("div", Object.assign({}, props, { ref: ref, className: "test" }), someProp));
+  var {
+      someProp
+    } = _a,
+    props = __rest(_a, ["someProp"]);
+  return reactExports.createElement("div", Object.assign({}, props, {
+    ref: ref,
+    className: "appier-ds " + "test"
+  }), someProp);
 });
 const MyComponent2 = reactExports.forwardRef((_a, ref) => {
-    var { someProp } = _a, props = __rest(_a, ["someProp"]);
-    return (reactExports.createElement("div", Object.assign({}, props, { ref: ref }), someProp));
+  var {
+      someProp
+    } = _a,
+    props = __rest(_a, ["someProp"]);
+  return reactExports.createElement("div", Object.assign({}, props, {
+    ref: ref
+  }, {
+    className: "appier-ds " + (props?.className ?? "")
+  }), someProp);
 });
-const MyComponent3 = (_a) => {
-    var { someProp } = _a, props = __rest(_a, ["someProp"]);
-    return reactExports.createElement("div", Object.assign({}, props), someProp);
+const MyComponent3 = _a => {
+  var {
+      someProp
+    } = _a,
+    props = __rest(_a, ["someProp"]);
+  return reactExports.createElement("div", Object.assign({}, props, {
+    className: "appier-ds " + (props?.className ?? "")
+  }), someProp);
 };
 // the Pick behavior does not happen when only using React.forwardRef
 const MyComponent4 = reactExports.forwardRef((_a, ref) => {
-    var { someProp } = _a, props = __rest(_a, ["someProp"]);
-    return (reactExports.createElement("div", Object.assign({}, props, { ref: ref }), someProp));
+  var {
+      someProp
+    } = _a,
+    props = __rest(_a, ["someProp"]);
+  return reactExports.createElement("div", Object.assign({}, props, {
+    ref: ref
+  }, {
+    className: "appier-ds " + (props?.className ?? "")
+  }), someProp);
 });
-
 exports.MyComponent = MyComponent;
 exports.MyComponent2 = MyComponent2;
 exports.MyComponent3 = MyComponent3;
