@@ -1798,7 +1798,7 @@ var React = __toESM(require_react());
 var MyComponent = React.forwardRef(
   (_a, ref) => {
     var _b = _a, { someProp } = _b, props = __objRest(_b, ["someProp"]);
-    return /* @__PURE__ */ React.createElement("div", __spreadProps(__spreadValues({}, props), { ref }), someProp);
+    return /* @__PURE__ */ React.createElement("div", __spreadProps(__spreadValues({}, props), { ref, className: "test" }), someProp);
   }
 );
 var MyComponent2 = React.forwardRef(
